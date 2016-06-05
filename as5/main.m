@@ -69,7 +69,7 @@ disp(' PART 4');
 disp(' ');
 
 secondTr = createTransmitterReceiver([4500 2500 2000 1200 5000 1000]);
-trPercentage = [.25 .2 .15 .5 .3 .5];
+trPercentage = [.25 .2 .15 .05 .3 .05];
 
 switchNum = 3;
 secondAfterTr = transmitteReceive(secondTr, frameTime, trPercentage, switchNum);
@@ -107,6 +107,7 @@ for i = 1:10
   utilForDifferentFrameTime(i) = utilizationOfNetwork(firstTr,firstTrAfter,i, switchNum);
 end
 
+disp();
 plot(utilForDifferentFrameTime);
 pause
 
